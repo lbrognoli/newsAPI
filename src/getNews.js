@@ -12,7 +12,7 @@ const getNews = () => {
         const response = await customsearch.cse.list({
             auth : settings.apiKey,
             cx : settings.cseId,
-            q : encodeURI(query),
+            q : query,
             dateRestrict : "w2"
         })
     
