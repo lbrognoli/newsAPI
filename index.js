@@ -11,4 +11,6 @@ app.get("/", (req,res) => {
                 <h4>Sample: <a> https://finewsapi.herokuapp.com/news?searchTerm=Brazil </a></h4>`)
 })
 
-app.listen(3000 || process.env.PORT)
+app.listen(process.env.PORT || 3000, () => {
+    console.log("Server is up and running")
+})
