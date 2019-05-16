@@ -8,7 +8,7 @@ app.get("/news", (req, res) => {
 
 app.get("/", (req,res) => {
     res.send(`<h1> Welcome to the news API </h1>
-                <h4>Sample: <a> https://finewsapi.herokuapp.com/news?searchTerm=Brazil </a></h4>`)
+                <h4>Sample: <a href="https://finewsapi.herokuapp.com/news?searchTerm=Brazil"> https://finewsapi.herokuapp.com/news?searchTerm=Brazil </a></h4>`)
 })
 
 app.listen(process.env.PORT || 3000, () => {
