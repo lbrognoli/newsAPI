@@ -6,4 +6,9 @@ app.get("/news", (req, res) => {
     getNews(req.query.searchTerm).then(r => res.send(r)).catch(e => res.send(e))
 })
 
+app.get("/", (req,res) => {
+    res.send(`<h1> Welcome to the news API </h1>
+                <h4>Sample: <a> https://finewsapi.herokuapp.com/news?searchTerm=Brazil </a></h4>`)
+})
+
 app.listen(3000 || process.env.PORT)
