@@ -8,11 +8,11 @@ const getNews = () => {
         cseId : process.env.CX
     }
     
-    const runSearch = async (query) => {
+    const runSearch = async () => {
         const response = await customsearch.cse.list({
             auth : settings.apiKey,
             cx : settings.cseId,
-            q : query,
+            q : "Bolsonaro",
             dateRestrict : "w2"
         })
     
@@ -51,8 +51,8 @@ const getNews = () => {
             }, newsData)
     }
     
-    const execute = async (query) => {
-        const rawNews = await runSearch(query)
+    const execute = async () => {
+        const rawNews = await runSearch()
         return formatNews(rawNews)
     }
 
